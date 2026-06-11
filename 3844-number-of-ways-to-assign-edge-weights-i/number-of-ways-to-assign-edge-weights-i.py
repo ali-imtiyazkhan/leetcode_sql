@@ -12,7 +12,7 @@ class Solution:
             g[v].append(u)
 
         depth = 0
-        stack = [(1, 0, 0)]  # node, parent, depth
+        stack = [(1, 0, 0)]
 
         while stack:
             node, parent, d = stack.pop()
