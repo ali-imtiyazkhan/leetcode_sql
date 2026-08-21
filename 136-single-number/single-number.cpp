@@ -1,17 +1,12 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        unordered_set<int> st;
+      int n = nums.size();
+      int ans = 0;
 
-        for (int num : nums) {
-            if(st.count(num)){
-                st.erase(num);
-            }
-            else{
-                st.insert(num);
-            }
-        }
-
-        return *st.begin();
+      for(int i = 0; i < n;i++){
+         ans ^= nums[i];
+      }
+      return ans;
     }
 };
